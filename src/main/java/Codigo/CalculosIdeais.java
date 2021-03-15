@@ -3,72 +3,72 @@ package Codigo;
 
 public class CalculosIdeais {
     
-    public float Fosforo(int TexturadeSolo){
+    public double Fosforo(int TexturadeSolo){
         
         switch (TexturadeSolo) {
             case 1:
-                return (float) 9.0;
+                return 9.0;
             case 2:
-                return (float) 12.0;
+                return 12.0;
             default:
                 return 0;
         }
         
     }
     
-    public float Potassio(int TexturadeSolo){
+    public double Potassio(int TexturadeSolo){
         
         switch (TexturadeSolo) {
             case 1:
-                return (float) 0.35;
+                return 0.35;
             case 2:
-                return (float) 0.25;
+                return 0.25;
             default:
                 return 0;
         }
     }
         
-    public float Calcio(int TexturadeSolo){
+    public double Calcio(int TexturadeSolo){
         
         switch (TexturadeSolo) {
             case 1:
-                return (float) 6.0;
+                return 6.0;
             case 2:
-                return (float) 4.0;
+                return 4.0;
             default:
                 return 0;
         }
     }
             
-    public float Magnesio(int TexturadeSolo){
+    public double Magnesio(int TexturadeSolo){
         
         switch (TexturadeSolo) {
             case 1:
-                return (float) 1.5;
+                return 1.5;
             case 2:
-                return (float) 1.0;
+                return 1.0;
             default:
                 return 0;
         }
     }
                 
-    public float Enxofre(int TexturadeSolo){
+    public double Enxofre(int TexturadeSolo){
         
         switch (TexturadeSolo) {
             case 1:
-                return (float) 9.0;
+                return  9.0;
             case 2:
-                return (float) 6.0;
+                return  6.0;
             default:
                 return 0;
         }
     }
                     
-    public float Aluminio(float valor){
+    public double Aluminio(double valor){
         
         return 0;
     }
-    public float HAL(float valor){
+    public double HAL(double valor){
         
         return 0;
     }                

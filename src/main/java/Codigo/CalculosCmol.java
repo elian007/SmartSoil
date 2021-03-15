@@ -2,26 +2,26 @@
 package Codigo;
 
 public class CalculosCmol {
-        public float S_cmol(float potassio, float calcio, float magnesio){
+        public double S_cmol(double potassio, double calcio, double magnesio){
             
-            float soma = potassio + magnesio + calcio;
+            double soma = potassio + magnesio + calcio;
             
             return soma; 
         }
         
-        public float CTC_cmol(float potassio, float calcio, float magnesio, float h_al){
+        public double CTC_cmol(double potassio, double calcio, double magnesio, double h_al){
             
-            float soma = potassio + magnesio + calcio + h_al;
+            double soma = potassio + magnesio + calcio + h_al;
             
             return  soma;
         
         }
         
-        public float V_atual (float potassio, float calcio, float magnesio, float h_al){
+        public double V_atual (double potassio, double calcio, double magnesio, double h_al){
             
-            float S_cmol = potassio + magnesio + calcio;
-            float CTC_cmol = potassio + magnesio + calcio + h_al;
-            float soma = 100 * S_cmol / CTC_cmol;
+            double S_cmol = potassio + magnesio + calcio;
+            double CTC_cmol = potassio + magnesio + calcio + h_al;
+            double soma = 100 * S_cmol / CTC_cmol;
             
             return soma;
         
