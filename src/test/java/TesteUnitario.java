@@ -1,6 +1,7 @@
 import Codigo.CalculosCmol;
 import Codigo.CalculosIdeais;
 import Codigo.CorrecaoRecuperacaoFosforo;
+import Codigo.CorrecaoRecuperacaoPotassio;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,6 +16,7 @@ public class TesteUnitario {
     CalculosIdeais ideais = new CalculosIdeais();
     CalculosCmol cmol = new CalculosCmol();
     CorrecaoRecuperacaoFosforo  crf = new CorrecaoRecuperacaoFosforo();
+    CorrecaoRecuperacaoPotassio  crp = new CorrecaoRecuperacaoPotassio();
     
     @Test
     public void test1(){
@@ -84,5 +86,24 @@ public class TesteUnitario {
         assertNotSame(Double.parseDouble(String.format("%.2f", crf.CorrecaoRecuperacaoFosforo(i, j, k, l )).replaceAll( "," , "." )),(double)2697.12); //valor correto 2697.11
         assertEquals(Double.parseDouble(String.format("%.2f", crf.CorrecaoRecuperacaoFosforo(i, j, k, l )).replaceAll( "," , "." )),(double)2697.11); //valor correto 2697.11
 
+    }
+    
+        @Test
+    public void test10(){
+        double a = 5.5, b = 3.4, c = 2.7, d = 7.7;
+        double e = 3.3, f = 6.4, g = 2.8, h = 2.7;
+        double i = 5.4, j = 7.4, k = 9.7, l = 1.7;
+        double m = 8.5, n = 6.4, o = 2.7, p = 5.7;
+        
+        int tipoFonte1 = 1, tipoFonte2 = 2, tipoFonte3 = 3, tipoFonte4 = 4;
+        
+        double potassioDesejado1 = 3, potassioDesejado2 = 22, potassioDesejado3 = 35, potassioDesejado4 = 70;
+                
+        assertEquals(Double.parseDouble(String.format("%.2f", crp.CorrecaoRecuperacaoPotassio(tipoFonte1, potassioDesejado1 ,a, b, c, d )).replaceAll( "," , "." )),(double)0.0); 
+        assertEquals(Double.parseDouble(String.format("%.2f", crp.CorrecaoRecuperacaoPotassio(tipoFonte2, potassioDesejado2 ,e, f, g, h )).replaceAll( "," , "." )),(double)93.42); 
+        assertEquals(Double.parseDouble(String.format("%.2f", crp.CorrecaoRecuperacaoPotassio(tipoFonte3, potassioDesejado3 ,i, j, k, l )).replaceAll( "," , "." )),(double)15405.82); 
+        assertNotSame(Double.parseDouble(String.format("%.2f", crp.CorrecaoRecuperacaoPotassio(tipoFonte3, potassioDesejado3 ,i, j, k, l )).replaceAll( "," , "." )),(double)15405.81); //valor correto 15405.82
+        assertEquals(Double.parseDouble(String.format("%.2f", crp.CorrecaoRecuperacaoPotassio(tipoFonte4, potassioDesejado4 ,m, n, o, p )).replaceAll( "," , "." )),(double)19596.00); 
+  
     }
 }

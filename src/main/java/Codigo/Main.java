@@ -25,7 +25,7 @@ public class Main {
         
         //-----------Teste Correção/Recuperação Potássio---------------------
         CorrecaoRecuperacaoPotassio crp = new CorrecaoRecuperacaoPotassio();
-        System.out.println(crp.CorrecaoRecuperacaoPotassio(1, 3, 5.76, 1.63, 0.15, 5.35));
+        System.out.println(crp.CorrecaoRecuperacaoPotassio(1, 3, 5.5, 3.4, 2.7, 7.7));
         
     }
     

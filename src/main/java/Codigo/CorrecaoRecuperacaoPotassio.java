@@ -21,7 +21,7 @@ public class CorrecaoRecuperacaoPotassio {
         }
     }
     
-    public double CorrecaoRecuperacaoPotassio(int tipoFonte, double potassioDesejado, double calcio, double magnesio, double potassio, double h_al){
+    public double CorrecaoRecuperacaoPotassio(int tipoFonte, double potassioDesejado, double potassio, double calcio, double magnesio,  double h_al){
             
         
         double tipoPotacio = tipoPotacio(tipoFonte);
@@ -44,8 +44,9 @@ public class CorrecaoRecuperacaoPotassio {
         double soma7 = soma6  * 100 / 85 / 100;
         
         double soma8 = soma7 * 100 / tipoPotacio; 
+        
             
-        return soma8 * 100;
+        return (soma8 * 100) > 0 ? (soma8 * 100) : 0;
     }
     
 }
