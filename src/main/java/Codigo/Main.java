@@ -5,14 +5,14 @@ public class Main {
     
     public static void main(String[] args) {
         //-----------Teste ideais---------------------
-        CalculosIdeais ideais = new CalculosIdeais(); 
+        //CalculosIdeais ideais = new CalculosIdeais(); 
         
         //Teste System.out.println(ideais.Enxofre(1));
         //Teste System.out.println(ideais.Magnesio(1));
         
         //--------------------------------------------
         //-----------Teste cmol---------------------
-        CalculosCmol cmol = new CalculosCmol(); 
+        //CalculosCmol cmol = new CalculosCmol(); 
         
         //System.out.println(cmol.S_cmol((float)0.15,(float)5.76,(float)1.63));
         //System.out.println(cmol.CTC_cmol((float)0.15,(float)5.76,(float)1.63, (float)5.35));
@@ -20,8 +20,12 @@ public class Main {
        
         //--------------------------------------------
         //-----------Teste Correção/Recuperação Fósforo---------------------
-        CorrecaoRecuperacaoFosforo  crf = new CorrecaoRecuperacaoFosforo();
-        System.out.println(crf.CorrecaoRecuperacaoFosforo(70, 3, 70, 8.59));
+        //CorrecaoRecuperacaoFosforo  crf = new CorrecaoRecuperacaoFosforo();
+        //System.out.println(crf.CorrecaoRecuperacaoFosforo(70, 3, 70, 8.59));
+        
+        //-----------Teste Correção/Recuperação Potássio---------------------
+        CorrecaoRecuperacaoPotassio crp = new CorrecaoRecuperacaoPotassio();
+        System.out.println(crp.CorrecaoRecuperacaoPotassio(1, 3, 5.76, 1.63, 0.15, 5.35));
         
     }
     
