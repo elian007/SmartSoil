@@ -38,11 +38,9 @@ public class CorrecaoRecuperacaoFosforo {
         
         double calculo1 = (teorFosforo - fosforoNoSolo) * 2 * 2.29;
                 
-        double calculo2 = calculo1 * 100 / eficienciaFosforo / 100;
-                
-        double valor = calculo2 * 100 / FontesFosforo(fonteFosforo);
-        
-        return valor * 100; 
+        double calculo2 = (calculo1 * 100 / eficienciaFosforo / 100) * 100 / FontesFosforo(fonteFosforo);
+                       
+        return calculo2 * 100; 
     }
     
 }
