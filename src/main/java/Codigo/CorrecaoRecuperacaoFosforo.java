@@ -43,4 +43,37 @@ public class CorrecaoRecuperacaoFosforo {
         return calculo2 * 100; 
     }
     
+    double custoCorrecaoFosforo(double valorTonelada, double qtdFosforoKg){
+        return valorTonelada * (qtdFosforoKg/1000);
+    }
+    
+    
+    double enxofreKgHectare(int fonte) {
+        double enxofre;
+        double fosforoKgHectare = CorrecaoRecuperacaoFosforo(12.0, 1, 70.0, 8.59);
+        double alqueire = fosforoKgHectare * 2.42;
+
+        switch (fonte) {
+            case 1:
+                enxofre = (alqueire * 0.1)/2.42;
+                return enxofre;
+            case 5:
+                enxofre = fosforoKgHectare * 0.15;
+                return enxofre;
+            case 12:
+                enxofre = (alqueire * 0.11)/2.42;
+                return enxofre;
+            default:
+                enxofre = 0.0;
+                return enxofre;
+        }
+    }
+    
+    double calcioKgHectare(int fonte, double fosforoKgHectare){
+        
+        double valorCalcio = FontesFosforo(1);
+        double calcioKgHectare = fosforoKgHectare * valorCalcio;
+        return calcioKgHectare;
+    }
+    
 }
