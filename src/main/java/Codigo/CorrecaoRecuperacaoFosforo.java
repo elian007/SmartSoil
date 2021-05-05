@@ -3,6 +3,36 @@ package Codigo;
 
 public class CorrecaoRecuperacaoFosforo {
     
+    public double ValorCalcio(int fonte) {
+
+        switch (fonte) {
+            case 1:
+                return 0.28;
+            case 2:
+                return 0.2;
+            case 3:
+                return 0.09;
+            case 4:
+                return 0.16;
+            case 5:
+                return 0.28;
+            case 6:
+                return 0.52;    
+            case 7:
+                return 0.52;    
+            case 8:
+                return 0.45;
+            case 9:
+                return 0.28;
+            case 10:
+                return 0.44;
+            case 11:
+                return 0.0;
+            case 12:
+                return 0.18;
+        }
+        return 0;
+    }
     public double FontesFosforo(int fonteFosforo){
         switch (fonteFosforo) {
             case 1:
@@ -43,12 +73,12 @@ public class CorrecaoRecuperacaoFosforo {
         return calculo2 * 100; 
     }
     
-    double custoCorrecaoFosforo(double valorTonelada, double qtdFosforoKg){
+    public double custoCorrecaoFosforo(double valorTonelada, double qtdFosforoKg){
         return valorTonelada * (qtdFosforoKg/1000);
     }
     
     
-    double enxofreKgHectare(int fonte) {
+    public double enxofreKgHectare(int fonte) {
         double enxofre;
         double fosforoKgHectare = CorrecaoRecuperacaoFosforo(12.0, 1, 70.0, 8.59);
         double alqueire = fosforoKgHectare * 2.42;
@@ -69,9 +99,9 @@ public class CorrecaoRecuperacaoFosforo {
         }
     }
     
-    double calcioKgHectare(int fonte, double fosforoKgHectare){
+    public double calcioKgHectare(int fonte, double fosforoKgHectare){
         
-        double valorCalcio = FontesFosforo(1);
+        double valorCalcio = ValorCalcio(fonte);
         double calcioKgHectare = fosforoKgHectare * valorCalcio;
         return calcioKgHectare;
     }

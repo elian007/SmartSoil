@@ -67,8 +67,18 @@ Java        |                     1    |        9    |          0      |       3
 -------------------------------------------------------------------------------
 
 
-#Atividade 4
+# Atividade 4
 
-    * Criado o teste para o quadro de correção/recuperação fósforo.
-    Obs: acredito que foi tranquilo entender o código e fazer o teste. Pois a linha de raciocínio usada é muito parecida com a que eu utilizava
-         para fazer minhas atividades. Porém, acredito que assim como foi me orientado a buscar novas soluções para resolver as atividades da planilha, seria o caso deste código. Pois uma pessoa que não teria a mesma linha de raciocínio para realizar um código assim, poderia ter dificuldades para interpretar. Portanto, um padrão/pattern/design a ser aplicado viria a resolver essa questão.
+    * Criado o teste para o quadro de "CorreçãoRecuperaçãoFósforo".
+        Obs: acredito que foi tranquilo entender o código e fazer o teste. Pois a linha de raciocínio 
+            usada é muito parecida com a que eu utilizava para fazer minhas atividades. Porém, acredito 
+            que assim como foi me orientado a buscar novas soluções para resolver as atividades da planilha,
+            seria o caso deste código. Pois uma pessoa que não teria a mesma linha de raciocínio para realizar 
+            um código assim, poderia ter dificuldades para interpretar. Portanto, um padrão/pattern/design a ser 
+            aplicado viria a resolver essa questão.
+    
+    *Criado métodos (cálcio, enxofre e custo) que faltaram referente ao quadro de "CorreçãoRecuperaçãoFósforo" 
+    e seus respectivos asserts no teste unitário.
+
+
+        
