@@ -2,6 +2,7 @@
 package Atividade_Testes;
 
 import Codigo.CorrecaoRecuperacaoFosforo;
+import Codigo.CorrecaoRecuperacaoPotassio;
 import java.text.DecimalFormat;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,4 +20,12 @@ public class Atividade_Testes {
         assertEquals(format.format(156.18), format.format(new CorrecaoRecuperacaoFosforo().custoCorrecaoFosforo(1260.00, 123.95)));
     }
     
+    @Test
+    public void CorrecaoRecuperacaoPotassio(){
+        DecimalFormat format = new DecimalFormat("#.##");
+        
+        assertEquals(format.format(450.55), format.format(new CorrecaoRecuperacaoPotassio().CorrecaoRecuperacaoPotassio(1, 3, 0.15, 5.76, 1.63, 5.35)));
+
+        
+    }
 }

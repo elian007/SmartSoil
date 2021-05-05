@@ -80,5 +80,6 @@ Java        |                     1    |        9    |          0      |       3
     *Criado métodos (cálcio, enxofre e custo) que faltaram referente ao quadro de "CorreçãoRecuperaçãoFósforo" 
     e seus respectivos asserts no teste unitário.
 
+    *Criado método para o quadro CorreçãoRecuperaçãoPotássio para descobrir a quantidade a aplicar de potássio.
 
         
