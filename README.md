@@ -82,4 +82,4 @@ Java        |                     1    |        9    |          0      |       3
 
     *Criado método para o quadro CorreçãoRecuperaçãoPotássio para descobrir a quantidade a aplicar de potássio.
 
-        
+    *Criado teste unitário para o quadro de teores do solo: Scmol, CTCmol, V% atual.

@@ -1,6 +1,7 @@
 
 package Atividade_Testes;
 
+import Codigo.CalculosCmol;
 import Codigo.CorrecaoRecuperacaoFosforo;
 import Codigo.CorrecaoRecuperacaoPotassio;
 import java.text.DecimalFormat;
@@ -27,5 +28,15 @@ public class Atividade_Testes {
         assertEquals(format.format(450.55), format.format(new CorrecaoRecuperacaoPotassio().CorrecaoRecuperacaoPotassio(1, 3, 0.15, 5.76, 1.63, 5.35)));
 
         
+    }
+    
+    @Test
+    public void TeoresSolo(){
+        DecimalFormat format = new DecimalFormat("#.##");
+        
+        assertEquals(format.format(7.54), format.format(new CalculosCmol().S_cmol(0.15, 5.76, 1.63)));
+        assertEquals(format.format(12.89), format.format(new CalculosCmol().CTC_cmol(0.15, 5.76, 1.63, 5.35)));
+        assertEquals(format.format(58.49), format.format(new CalculosCmol().V_atual(0.15, 5.76, 1.63, 5.35)));
+
     }
 }
